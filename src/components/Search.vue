@@ -16,7 +16,7 @@ export default {
   methods: {
     onClick() {
       this.$store.dispatch('search', this.searchString);
-      // this.$emit('search', this.searchString)
+      //this.$emit('search', this.searchString)
     }
   }
 }</script>

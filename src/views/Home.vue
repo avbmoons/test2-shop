@@ -2,17 +2,26 @@
   <div class="page">
     <h1>Home page</h1>
     <header>
+      <!-- <Search v-on:search="onSearch"></Search> -->
       <Search></Search>
       <button class="cart-button" type="button" v-on:click="onToggleCart">Корзина</button>
     </header>
     <main>
+      <!-- <GoodsList v-bind:list="filteredGoods" v-on:add="addToCart"></GoodsList> -->
       <GoodsList></GoodsList>
     </main>
+    <!-- <Cart 
+      v-bind:isVisibleCart="isVisibleCart"
+      v-bind:cart="cart"
+      v-on:remove="removeFromCart"
+      v-on:close="onToggleCart" 
+      v-if="isVisibleCart">
+    </Cart> -->
     <Cart 
       v-bind:isVisibleCart="isVisibleCart"
       v-on:close="onToggleCart" 
       v-if="isVisibleCart">
-  </Cart>
+    </Cart>
   </div>
 </template>
 
@@ -22,6 +31,7 @@ import GoodsList from '../components/GoodsList.vue';
 import Cart from '../components/Cart.vue';
 
 // const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/';
+
 // @ is an alias to /src
 export default {
   name:'Home',
@@ -92,21 +102,21 @@ header {
   display: flex;
   justify-content: center;
 }
-    // .modal {
-    //   width: 600px;
-    //   height: 400px;
-    //   position: absolute;
-    //   top: 100px;
-    //   left: calc(50% - 300px);
-    //   border: 1px solid #ccc;
-    //   background-color: white;
-    //   border-radius: 4px;
-    //   overflow: auto;
-    // }
+    .modal {
+      width: 600px;
+      height: 400px;
+      position: absolute;
+      top: 100px;
+      left: calc(50% - 300px);
+      border: 1px solid #ccc;
+      background-color: white;
+      border-radius: 4px;
+      overflow: auto;
+    }
 
-    // .close {
-    //   position: absolute;
-    //   top: 5px;
-    //   right: 5px;
-    // }
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
 </style>

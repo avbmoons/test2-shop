@@ -27,7 +27,7 @@ export default {
   // },
   methods: {
     onAdd(good) {
-      // this.$emit('add', good)
+      //this.$emit('add', good)
       this.$store.dispatch('addToCart',good);
     }
   }

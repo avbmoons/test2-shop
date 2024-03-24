@@ -15,7 +15,7 @@ export default {
   methods: {
     onRemove() {
       this.$store.dispatch('removeFromCart', this.good);
-      // this.$emit('remove', this.good);
+      //this.$emit('remove', this.good);
       //console.log(good);
     }
   }

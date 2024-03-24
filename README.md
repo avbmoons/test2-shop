@@ -1,4 +1,4 @@
-# test2-shop
+# test3-shop
 
 ## Project setup
 ```

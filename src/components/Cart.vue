@@ -3,11 +3,16 @@
     <span class="close" v-on:click="onClose">x</span>
 
     <div class="goods-list">
-      <CartItem
+      <!-- <CartItem
       v-for="good of cart" 
       v-bind:key="good.id_product" 
       v-bind:good="good" 
       v-on:remove="onRemove"
+      ></CartItem> -->
+      <CartItem
+      v-for="good of cart" 
+      v-bind:key="good.id_product" 
+      v-bind:good="good" 
       ></CartItem>
     </div>
   </div>
@@ -33,7 +38,8 @@ export default {
       this.$emit('close')
     },
     onRemove(good) {
-      this.$emit('remove', good)
+      //this.$emit('remove', good)
+      this.$store.dispatch('removeFromCart',good);
     }
   }
 }
